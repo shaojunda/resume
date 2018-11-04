@@ -66,4 +66,8 @@ ul, ol {
   background-image: url(./img/rs-cove.jpg);
   background-position: center center;
   background-size: cover;
+  .mask {
+    height: 515px;
+    background-color: rgba(0,0,0,0.8)
+  }
 }
