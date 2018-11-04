@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>我的简历</title>
-  <link rel="stylesheet" href="7a.css">
+  <link rel="stylesheet" href="8.css" chartset="utf-8">
   <script src="//at.alicdn.com/t/font_890407_bo91qy9seve.js"></script>
   <style type="text/css">
     .icon {
@@ -14,15 +13,17 @@
        fill: currentColor;
        overflow: hidden;
     }
-</style>
+  </style>
+  <title>我的简历</title>
 </head>
 <body>
   <div class="topNavBar">
-    <div class="topNavBar-inner clearfix">
-      <a href="#" class="logo" alt="log">
-        <span class="rs">RS</span><span class="card">card</span>
-      </a>
-      <nav>
+    <div class="topNavBar__inner clearfix">
+      <div class="topNavBar__logo">
+        <span class="topNavBar__logo--rs">RS</span>
+        <span class="topNavBar__logo--card">card</span>
+      </div>
+      <nav class="topNavBar__nav">
         <ul class="clearfix">
           <li><a href="#">关于</a></li>
           <li><a href="#">技能</a></li>
@@ -35,31 +36,32 @@
       </nav>
     </div>
   </div>
+
   <div class="banner">
     <div class="mask"></div>
   </div>
   <main>
-    <div class="userCard">
-      <div class="pictrueAndText clearfix">
-        <div class="picture">
-          <img src="./img/avatar.jpg" width="299" height="347 " alt="头像">
+    <div class="myCard">
+      <div class="profile clearfix">
+        <div class="profile--picture">
+          <img src="./img/avatar.jpg" width="299" height="347" alt="头像">
         </div>
-        <div class="text">
+        <div class="profile--text">
           <span class="welcome">Hello
             <span class="triangle"></span>
           </span>
           <h1>邵俊达</h1>
-          <p>前段开发工程师</p>
+          <p>全栈开发工程师</p>
           <hr>
           <dl>
             <dt>年龄</dt>
-            <dd>180</dd>
+            <dd>18</dd>
             <dt>所在城市</dt>
             <dd>杭州</dd>
             <dt>邮箱</dt>
-            <dd>ddfd@gmail.com</dd>
+            <dd>shaojunda@gmail.com</dd>
             <dt>手机</dt>
-            <dd>18839393939</dd>
+            <dd>18888888888</dd>
           </dl>
         </div>
       </div>
@@ -101,64 +103,52 @@
         </a>
       </footer>
     </div>
-    <p class="downloadResume-wrapper">
-      <a class="downloadResume" href="./resume.pdf" download>下载 PDF 简历</a>
-    </p>
-
-    <p class="seflIntroduction">
-      邵俊达，资深全栈工程师。<br>
-      技能：前端开发，Rails 开发，Node.js 开发
+    <div class="downloadWrapper">
+      <a href="./resume.pdf" class="downloadResume" download>下载 PDF 简历</a>
+    </div>
+    <p class="selfIntroduction">
+        邵俊达，资深全栈工程师。<br>
+        技能：前端开发，Rails 开发，Node.js 开发
     </p>
   </main>
-  <section class="skills">
+
+  <section class="skills">
     <h2>技能</h2>
     <ol class="clearfix">
       <li>
-        <h3>
-          HTML5 &amp; css 3
-        </h3>
+        <h3>HTML5 & CSS 3</h3>
         <div class="progressBar">
-          <div class="progress"></div>
+          <div class="progress css"></div>
         </div>
       </li>
       <li>
-        <h3>
-          JavaScript
-        </h3>
+          <h3>JavaScript</h3>
+          <div class="progressBar">
+            <div class="progress css"></div>
+          </div>
+      </li>
+      <li>
+          <h3>jQuery</h3>
+          <div class="progressBar">
+            <div class="progress css"></div>
+          </div>
+      </li>
+      <li>
+        <h3>Vue</h3>
         <div class="progressBar">
-          <div class="progress"></div>
+          <div class="progress css"></div>
         </div>
       </li>
       <li>
-        <h3>
-          jQuery
-        </h3>
+        <h3>React</h3>
         <div class="progressBar">
-          <div class="progress"></div>
+          <div class="progress css"></div>
         </div>
       </li>
       <li>
-        <h3>
-          Vue
-        </h3>
+        <h3>HTTP</h3>
         <div class="progressBar">
-          <div class="progress"></div>
-        </div>
-      </li>
-      <li>
-        <h3>
-            React
-        </h3>
-        <div class="progressBar">
-          <div class="progress"></div>
-        </div>
-      </li>
-      <li>
-        <h3>
-            HTTP
-        </h3>
-        <div class="progressBar">
-          <div class="progress"></div>
+          <div class="progress css"></div>
         </div>
       </li>
     </ol>
@@ -169,35 +159,35 @@
       <ol class="clearfix">
         <li id="portfolio1">所有</li>
         <li id="portfolio2">框架</li>
-        <li id="portfolio3">原生 JS &amp; CSS</li>
+        <li id="portfolio3">原生 JS & CSS</li>
       </ol>
-      <div id="portfolioBar" class="bar state-1">
-        <div class="bar-inner"></div>
+      <div class="portfolioBar state-1" id="portfolioBar">
+        <div class="portfolioBar__inner"></div>
       </div>
     </nav>
     <div class="works">
-      <div class="big">
+      <div class="works__big">
         <img src="./img/pic-big.jpg" alt="">
       </div>
-      <div class="small1">
+      <div class="works__small1">
         <img src="./img/pic-small-1.jpg" alt="">
       </div>
-      <div class="small2">
+      <div class="works__small2">
         <img src="./img/pic-small-2.jpg" alt="">
       </div>
     </div>
   </section>
-
-  <script>
-    portfolio1.onclick = function() {
-      portfolioBar.className = 'bar state-1'
-    }
-    portfolio2.onclick = function() {
-      portfolioBar.className = 'bar state-2'
-    }
-    portfolio3.onclick = function() {
-      portfolioBar.className = 'bar state-3'
-    }
-  </script>
 </body>
+
+<script>
+  portfolio1.onclick = function() {
+    portfolioBar.className = "portfolioBar state-1"
+  }
+  portfolio2.onclick = function() {
+    portfolioBar.className = "portfolioBar state-2"
+  }
+  portfolio3.onclick = function() {
+    portfolioBar.className = "portfolioBar state-3"
+  }
+</script>
 </html>

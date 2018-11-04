@@ -1,0 +1,365 @@
+body {
+  margin: 0;
+  background: #efefef;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.topNavBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.topNavBar__inner {
+  padding: 0 16px;
+}
+
+.topNavBar__nav {
+  padding-top: 7px;
+  padding-bottom: 0px;
+  float: right;
+}
+
+.topNavBar__nav > ul {
+  list-style: none;
+}
+
+.topNavBar__nav > ul > li {
+  float: left;
+  margin-left: 17px;
+  margin-right: 17px;
+}
+
+.topNavBar__nav > ul > li > a {
+  font-size: 12px;
+  font-weight: bold;
+  color: #b7b7b7;
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+
+.topNavBar__nav > ul > li > a:hover {
+  border-bottom: 3px solid #e06567;
+}
+
+.topNavBar__logo {
+  float: left;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  font-size: 24px;
+  font-family: "Arial Black";
+}
+
+.topNavBar__logo--rs {
+  color: #e6686a;
+}
+
+.topNavBar__logo--card {
+  color: #9a9da2;
+}
+
+.banner {
+  height: 515px;
+  background-image: url(./img/rs-cove.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner .mask {
+  height: 515px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.myCard {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  -webkit-box-shadow: 0px 4px 9px 2px #cfcfcf;
+          box-shadow: 0px 4px 9px 2px #cfcfcf;
+}
+
+.profile {
+  padding: 50px;
+}
+
+.profile--picture {
+  float: left;
+}
+
+.profile--text {
+  float: left;
+  margin-left: 65px;
+  width: 470px;
+}
+
+.profile--text h1 {
+  margin-top: 18px;
+}
+
+.profile--text hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid #dedede;
+  margin: 20px 0;
+}
+
+.profile--text dl dt,
+.profile--text dl dd {
+  float: left;
+  margin: 5px 0;
+}
+
+.profile--text dl dt {
+  font-weight: bold;
+  width: 30%;
+}
+
+.profile--text dl dd {
+  width: 70%;
+  color: #9da0a7;
+  height: 22px;
+}
+
+.profile--text .welcome {
+  line-height: 22px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 6px 17px;
+  background-color: #e6686a;
+  color: white;
+  position: relative;
+}
+
+.profile--text .welcome .triangle {
+  display: block;
+  width: 0;
+  border: 10px solid transparent;
+  border-left-color: #e6686a;
+  border-top-width: 0px;
+  position: absolute;
+  left: 4px;
+  top: 100%;
+}
+
+.media {
+  background-color: #e6686a;
+  text-align: center;
+}
+
+.media a {
+  display: inline-block;
+  border-radius: 50%;
+  width: 40px;
+  line-height: 30px;
+  padding: 5px 0;
+  margin: 16px;
+}
+
+.media a:hover {
+  background-color: #cf5d5f;
+}
+
+.media svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+  vertical-align: top;
+}
+
+.downloadResume {
+  border: 1px solid #cdcfd1;
+  padding: 21px 55px;
+  display: inline-block;
+  margin: 32px 0;
+  color: #3d4451;
+  background-color: #efefef;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 2px;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+.downloadResume:hover {
+  -webkit-box-shadow: 0px 4px 9px 2px #cfcfcf;
+          box-shadow: 0px 4px 9px 2px #cfcfcf;
+}
+
+.downloadWrapper {
+  text-align: center;
+}
+
+.selfIntroduction {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: kai;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.skills, .portfolio {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+.skills > h2,
+.portfolio > h2 {
+  text-align: center;
+  color: #3d4451;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.skills > ol {
+  padding: 42px 50px 10px;
+  background-color: white;
+  margin-top: 30px;
+  -webkit-box-shadow: 0px 4px 9px 2px #cfcfcf;
+          box-shadow: 0px 4px 9px 2px #cfcfcf;
+}
+
+.skills ol > li {
+  width: 48%;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.skills ol > li:nth-child(even) {
+  float: right;
+}
+
+.skills .progressBar {
+  height: 5px;
+  background-color: #fae1e1;
+  border-radius: 2px;
+  margin: 4px 0 40px;
+}
+
+.skills .progressBar .progress {
+  height: 100%;
+  background-color: #e6686a;
+}
+
+.skills .progressBar .progress.css {
+  width: 70%;
+}
+
+.skills h3 {
+  font-size: 14px;
+  line-height: 1.1;
+  padding-right: 40px;
+}
+
+section.portfolio {
+  text-align: center;
+}
+
+.portfolio nav {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 32px;
+}
+
+.portfolio ol > li {
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.portfolio ol > li:last-child {
+  margin-right: 0px;
+}
+
+section ol > li {
+  float: left;
+}
+
+.portfolioBar {
+  height: 5px;
+  margin-top: 5px;
+  background-color: white;
+  border-radius: 2px;
+  margin-bottom: 100px;
+}
+
+.portfolioBar__inner {
+  height: 100%;
+  border-radius: 2px;
+  background-color: #e6686a;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.portfolioBar.state-1 .portfolioBar__inner {
+  width: 14%;
+  margin-left: 0;
+}
+
+.portfolioBar.state-2 .portfolioBar__inner {
+  width: 14%;
+  margin-left: 72px;
+}
+
+.portfolioBar.state-3 .portfolioBar__inner {
+  width: 40%;
+  margin-left: 146px;
+}
+
+section .works {
+  position: relative;
+}
+
+section .works__big {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section .works__small1 {
+  position: absolute;
+  top: 0;
+  left: 66.5591%;
+}
+
+section .works__small2 {
+  position: absolute;
+  top: 297px;
+  left: 66.5591%;
+}
+/*# sourceMappingURL=8.css.map */
