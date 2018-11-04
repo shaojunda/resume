@@ -68,4 +68,11 @@ ul, ol {
 .top-nav-bar__inner--nav ul > li a:hover {
   border-bottom: 3px solid #e06567;
 }
+
+.banner {
+  height: 515px;
+  background-image: url(./img/rs-cove.jpg);
+  background-position: center center;
+  background-size: cover;
+}
 /*# sourceMappingURL=9.css.map */
