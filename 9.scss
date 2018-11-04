@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.top-nav-bar {
+  &__inner {
+    &--logo {
+      float: left;
+    }
+    &--nav {
+      float: left;
+      ul > li {
+        float: left;
+      }
+    }
+  }
+}
