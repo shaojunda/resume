@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 ul, ol {
   list-style: none;
 }
@@ -14,14 +18,44 @@ ul, ol {
 }
 
 .top-nav-bar {
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   &__inner {
+    padding: 0 16px;
     &--logo {
       float: left;
+      font-size: 24px;
+      font-family: "Arial Black";
+      padding: 3px 0 4px;
+      .rs {
+        color: #e6686a;
+        margin-right: 4px;
+      }
+      .card {
+        color: #9a9da2;
+      }
     }
     &--nav {
-      float: left;
+      float: right;
+      padding: 7px 0 0;
       ul > li {
         float: left;
+        margin: 0 17px;
+        a {
+          display: inline-block;
+          font-size: 12px;
+          color: #b7b7b7;
+          font-weight: bold;
+          border-top: 3px solid transparent;
+          border-bottom: 3px solid transparent;
+          padding: 5px 0;
+          &:hover {
+            border-bottom: 3px solid #e06567;
+          }
+        }
       }
     }
   }
