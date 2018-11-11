@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./9.css">
+  <style type="text/css">
+    .icon {
+      width: 1em; height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+  </style>
   <title>个人简历</title>
 </head>
 <body>
@@ -14,14 +22,14 @@
         <span class="rs">RS</span><span class="card">card</span>
       </a>
       <nav class="top-nav-bar__inner--nav">
-        <ul class="clearfix">
-          <li><a href="#">关于</a></li>
-          <li><a href="#">技能</a></li>
-          <li><a href="#">作品</a></li>
-          <li><a href="#">博客</a></li>
-          <li><a href="#">日历</a></li>
-          <li><a href="#">联系方式</a></li>
-          <li><a href="#">其他</a></li>
+        <ul class="list clearfix">
+          <li class="item"><a class="link" href="#">关于</a></li>
+          <li class="item"><a class="link" href="#">技能</a></li>
+          <li class="item"><a class="link" href="#">作品</a></li>
+          <li class="item"><a class="link" href="#">博客</a></li>
+          <li class="item"><a class="link" href="#">日历</a></li>
+          <li class="item"><a class="link" href="#">联系方式</a></li>
+          <li class="item"><a class="link" href="#">其他</a></li>
         </ul>
       </nav>
     </div>
@@ -29,72 +37,170 @@
   <div class="banner">
     <div class="mask"></div>
   </div>
-  <main>
-    <div class="card">
-      <div class="picture-and-text">
+  <main class="main">
+    <div class="user-card">
+      <div class="user-card__container clearfix">
         <div class="picture">
-          <img src="#" alt="...">
+          <img src="./img/avatar.jpg" alt="...">
         </div>
-        <div class="prfile">
-          <span>Hello</span>
-          <h1>邵俊达</h1>
-          <p>全栈开发工程师</p>
-          <hr>
-          <dl>
-            <dt>年龄</dt>
-            <dd>29</dd>
-            <dt>所在城市</dt>
-            <dd>杭州</dd>
-            <dt>邮箱</dt>
-            <dd>junda@gmail.com</dd>
-            <dt>手机</dt>
-            <dd>18819999999</dd>
-          </dl>
+        <div class="profile">
+          <header class="profile__header">
+            <span class="welcome">
+              Hello
+              <span class="triangle"></span>
+            </span>
+            <h1 class="name">邵俊达</h1>
+            <p class="title">全栈开发工程师</p>
+            <hr class="separator">
+          </header>
+          <div class="profile__body">
+            <dl class="user-info">
+              <dt class="user-info__title">年龄</dt>
+              <dd class="user-info__content">29</dd>
+              <dt class="user-info__title">所在城市</dt>
+              <dd class="user-info__content">杭州</dd>
+              <dt class="user-info__title">邮箱</dt>
+              <dd class="user-info__content">junda@gmail.com</dd>
+              <dt class="user-info__title">手机</dt>
+              <dd class="user-info__content">18819999999</dd>
+            </dl>
+          </div>
         </div>
       </div>
-      <div class="footer">
-        <a href="#"><img src="#" alt="..."></a>
-        <a href="#"><img src="#" alt="..."></a>
-        <a href="#"><img src="#" alt="..."></a>
-        <a href="#"><img src="#" alt="..."></a>
-        <a href="#"><img src="#" alt="..."></a>
-        <a href="#"><img src="#" alt="..."></a>
-        <a href="#"><img src="#" alt="..."></a>
+      <div class="user-card__media">
+        <a href="#" class="link">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-wechat"></use>
+          </svg>
+        </a>
+        <a href="#" class="link">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-facebook"></use>
+          </svg>
+        </a>
+        <a href="#" class="link">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-line"></use>
+          </svg>
+        </a>
+        <a href="#" class="link">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-twitter"></use>
+          </svg>
+        </a>
+        <a href="#" class="link">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-tubiao215"></use>
+          </svg>
+        </a>
+        <a href="#" class="link">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-weibo"></use>
+          </svg>
+        </a>
+        <a href="#" class="link">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+          </svg>
+        </a>
       </div>
     </div>
-    <a href="#" class="download-resume-button"></a>
-    <p>
+    <p class="download-wrapper">
+      <a href="./resume.pdf" class="download-resume-button" download>下载 PDF 简历</a>
+    </p>
+    <p class="self-introduction">
       邵俊达，资深全栈开发工程师。<br>
       技能：前端开发，Rails 开发，Node.js 开发
     </p>
   </main>
 
   <section class="skills">
-    <h2>技能</h2>
-    <ol>
-      <li>HTML 5 & CSS 3</li>
-      <li>JavaScript</li>
-      <li>jQuery</li>
-      <li>Vue</li>
-      <li>React</li>
-      <li>HTTP</li>
-    </ol>
+    <div class="skills__header">
+      <h2 class="title">技能</h2>
+    </div>
+    <div class="skills__body">
+      <ol class="list clearfix">
+        <li class="item">
+          <h3 class="item__title">HTML 5 & CSS 3</h3>
+          <div class="progress-bar">
+            <div class="progress full"></div>
+          </div>
+        </li>
+        <li class="item">
+          <h3 class="item__title">JavaScript</h3>
+          <div class="progress-bar">
+            <div class="progress half"></div>
+          </div>
+        </li>
+        <li class="item">
+          <h3 class="item__title">jQuery</h3>
+          <div class="progress-bar">
+            <div class="progress most"></div>
+          </div>
+        </li>
+        <li class="item">
+          <h3 class="item__title">Vue</h3>
+          <div class="progress-bar">
+            <div class="progress less"></div>
+          </div>
+        </li>
+        <li class="item">
+          <h3 class="item__title">React</h3>
+          <div class="progress-bar">
+            <div class="progress less"></div>
+          </div>
+        </li>
+        <li class="item">
+          <h3 class="item__title">HTTP</h3>
+          <div class="progress-bar">
+            <div class="progress less"></div>
+          </div>
+        </li>
+      </ol>
+    </div>
   </section>
 
   <section class="collections">
-    <h2>作品集</h2>
-    <nav>
-      <ol>
-        <li>所有</li>
-        <li>框架</li>
-        <li>原生 JS & CSS</li>
-      </ol>
-    </nav>
-    <div class="works">
-      <div class="big"></div>
-      <div class="small"></div>
-      <div class="small"></div>
+    <div class="collections__header">
+      <div class="title">
+        <h2 class="title">作品集</h2>
+      </div>
+    </div>
+    <div class="collections__body">
+      <nav class="nav">
+        <ol class="list clearfix">
+          <li id="collectionAll" class="item">所有</li>
+          <li id="collectionFramework" class="item">框架</li>
+          <li id="collectionNative" class="item">原生 JS & CSS</li>
+        </ol>
+        <div class="collections-bar">
+          <div id="collectionBarInner" class="collections-bar__inner bar-first"></div>
+        </div>
+      </nav>
+      <div class="works">
+        <div class="big">
+          <img src="./img/pic-big.jpg" alt="big">
+        </div>
+        <div class="small-1">
+          <img src="./img/pic-small-1.jpg" alt="small-1">
+        </div>
+        <div class="small-2">
+          <img src="./img/pic-small-2.jpg" alt="small-2">
+        </div>
+      </div>
     </div>
   </section>
 </body>
+<script src="//at.alicdn.com/t/font_890407_bo91qy9seve.js"></script>
+<script>
+  collectionAll.onclick = function() {
+    collectionBarInner.className = "collections-bar__inner bar-first"
+  }
+  collectionFramework.onclick = function() {
+    collectionBarInner.className = "collections-bar__inner bar-second"
+  }
+  collectionNative.onclick = function() {
+    collectionBarInner.className = "collections-bar__inner bar-third"
+  }
+</script>
 </html>

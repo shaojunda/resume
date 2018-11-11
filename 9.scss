@@ -3,8 +3,17 @@
   padding: 0;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+
+body {
+  background-color: #efefef
+}
+
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul, ol {
@@ -27,12 +36,12 @@ ul, ol {
     padding: 0 16px;
     &--logo {
       float: left;
+      padding: 3px 0 4px;
       font-size: 24px;
       font-family: "Arial Black";
-      padding: 3px 0 4px;
       .rs {
-        color: #e6686a;
         margin-right: 4px;
+        color: #e6686a;
       }
       .card {
         color: #9a9da2;
@@ -41,17 +50,17 @@ ul, ol {
     &--nav {
       float: right;
       padding: 7px 0 0;
-      ul > li {
+      .list > .item {
         float: left;
         margin: 0 17px;
-        a {
+        .link {
+          border-top: 3px solid transparent;
+          border-bottom: 3px solid transparent;
+          padding: 5px 0;
           display: inline-block;
           font-size: 12px;
           color: #b7b7b7;
           font-weight: bold;
-          border-top: 3px solid transparent;
-          border-bottom: 3px solid transparent;
-          padding: 5px 0;
           &:hover {
             border-bottom: 3px solid #e06567;
           }
@@ -68,6 +77,264 @@ ul, ol {
   background-size: cover;
   .mask {
     height: 515px;
-    background-color: rgba(0,0,0,0.8)
+    background-color: rgba(0,0,0,0.6)
+  }
+}
+
+.main {
+  margin-top: -350px;
+}
+
+.user-card {
+  max-width: 940px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  &__container {
+    padding: 50px;
+    .picture {
+      float: left;
+    }
+    .profile {
+      float: left;
+      margin-left: 65px;
+      width: 470px;
+      &__header {
+        .welcome {
+          padding: 4px 16px;
+          display: inline-block;
+          line-height: 22px;
+          margin-bottom: 10px;
+          background-color: #e6686a;
+          color: white;
+          vertical-align: top;
+          position: relative;
+          .triangle {
+            border: 10px solid transparent;
+            width: 0px;
+            height: 0px;
+            border-top-color: black;
+            border-left-color: #e6686a;
+            border-bottom-color: transparent;
+            border-top-width: 0px;
+            position: absolute;
+            top: 100%;
+            left: 4px;
+          }
+        }
+        .name {
+          margin-top: 18px;
+        }
+        .separator {
+          height: 0;
+          border: none;
+          border-top: 1px solid #dedede;
+          margin: 20px 0;
+        }
+      }
+
+      &__body {
+        .user-info {
+          &__title {
+            float: left;
+            width: 30%;
+            padding: 5px 0;
+          }
+          &__content {
+            float: left;
+            width: 70%;
+            height: 22px;
+            color: #9da0a7;
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__media {
+    background-color: #e6686a;
+    text-align: center;
+    .link {
+      width: 50px;
+      display: inline-block;
+      line-height: 20px;
+      padding: 15px 0;
+      margin: 16px;
+      border-radius: 50%;
+      .icon {
+        width: 20px;
+        height: 20px;
+        vertical-align: top;
+        fill: white;
+      }
+      &:hover {
+        background-color: #cf5d5f;
+      }
+    }
+  }
+}
+
+.download-wrapper {
+  text-align: center;
+}
+
+.download-resume-button {
+  padding: 21px 55px;
+  border: 1px solid #cdcfd1;
+  display: inline-block;
+  margin: 32px 0;
+  font-weight: bold;
+  transition: box-shadow 0.2s;
+  &:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+.self-introduction {
+  max-width: 940px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.skills {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-top: 60px;
+  &__header {
+    .title {
+      color: #3d4451;
+      line-height: 1.2;
+      font-size: 34px;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+  &__body {
+    padding: 42px 50px 10px;
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    .list > .item {
+      float: left;
+      width: 48%;
+      box-sizing: border-box;
+    }
+    .list > .item:nth-child(even) {
+      float: right;
+    }
+    .item > .progress-bar {
+      margin: 4px 0 40px;
+      height: 5px;
+      background-color: #fae1e1;
+      border-radius: 2px;
+      .progress {
+        height: 100%;
+        background-color: #e6686a;
+        width: 30%;
+        &.full {
+          width: 80%;
+        }
+        &.half {
+          width: 50%;
+        }
+        &.most {
+          width: 70%;
+        }
+        &.less {
+          width: 30%;
+        }
+      }
+    }
+    .item {
+      &__title {
+        font-size: 14px;
+        line-height: 1.1;
+        padding-right: 40px;
+      }
+    }
+  }
+}
+
+.collections {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-top: 60px;
+  text-align: center;
+
+  &__header {
+    .title {
+      color: #3d4451;
+      line-height: 1.2;
+      font-size: 34px;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+
+  &__body {
+    .nav {
+      display: inline-block;
+      margin-top: 32px;
+      > .list {
+        cursor: pointer;
+        > .item {
+          float: left;
+          margin-right: 40px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .collections-bar {
+      margin-top: 5px;
+      margin-bottom: 100px;
+      height: 5px;
+      background-color: #fff;
+      border-radius: 2px;
+
+      &__inner {
+        height: 100%;
+        background-color:#e6686a;
+        border-radius: 2px;
+        transition: all 0.2s;
+        &.bar-first {
+          width: 14%;
+          margin-left: 0;
+        }
+        &.bar-second {
+          width: 14%;
+          margin-left: 72px;
+        }
+        &.bar-third {
+          width: 41%;
+          margin-left: 144px;
+        }
+      }
+    }
+
+    .works {
+      position: relative;
+      height: 597px;
+
+      .big {
+        position: absolute;
+        top: 0;
+      }
+      .small-1 {
+        position: absolute;
+        top: 0;
+        left: 66.87%;
+      }
+      .small-2 {
+        position: absolute;
+        top: 298px;
+        left: 66.87%;
+      }
+    }
   }
 }
