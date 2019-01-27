@@ -20,7 +20,7 @@
   <div class="site-welcome active" id="site-welcome">
     <div class="loading"></div>
   </div>
-  <div class="top-nav-bar">
+  <div class="top-nav-bar" id="topNavBar">
     <div class="top-nav-bar__inner clearfix">
       <a class="top-nav-bar__inner--logo">
         <span class="rs">RS</span><span class="card">card</span>
@@ -197,7 +197,15 @@
   <script>
     setTimeout(function() {
       document.getElementById("site-welcome").classList.remove("active")
-    }, 2000)
+    }, 1000)
+
+    window.onscroll = function(event) {
+      if(window.scrollY > 0) {
+        topNavBar.classList.add("sticky")
+      } else {
+        topNavBar.classList.remove("sticky")
+      }
+    }
   </script>
 </body>
 <script src="//at.alicdn.com/t/font_890407_bo91qy9seve.js"></script>

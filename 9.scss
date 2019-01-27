@@ -32,6 +32,8 @@ ul, ol {
   top: 0;
   left: 0;
   width: 100%;
+  transition: all 0.5s;
+  color: #b7b7b7;
   &__inner {
     padding: 0 16px;
     &--logo {
@@ -58,15 +60,43 @@ ul, ol {
           border-bottom: 3px solid transparent;
           padding: 5px 0;
           display: inline-block;
+          position: relative;
           font-size: 12px;
-          color: #b7b7b7;
+          color: inherit;
           font-weight: bold;
-          &:hover {
-            border-bottom: 3px solid #e06567;
+          &:hover::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #e06567;
+            height: 3px;
+            animation: menuSlide 0.3s;
           }
         }
       }
     }
+  }
+  &.sticky {
+    background: white;
+    padding: 7px 0;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #3d4451;
+    .top-nav-bar__inner--nav {
+      padding-top: 4px;
+    }
+  }
+}
+
+@keyframes menuSlide {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
   }
 }
 
