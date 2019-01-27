@@ -29,8 +29,22 @@
         <ul class="list clearfix">
           <li class="item"><a class="link" href="#">关于</a></li>
           <li class="item"><a class="link" href="#">技能</a></li>
-          <li class="item"><a class="link" href="#">作品</a></li>
-          <li class="item"><a class="link" href="#">博客</a></li>
+          <li class="item">
+            <a class="link menu-trigger" href="#">作品</a>
+            <ul class="submenu">
+              <li>作品 1</li>
+              <li>作品 2</li>
+              <li>作品 3</li>
+            </ul>
+          </li>
+          <li class="item">
+            <a class="link menu-trigger" href="#">博客</a>
+            <ul class="submenu">
+              <li>博客 1</li>
+              <li>博客 2</li>
+              <li>博客 3</li>
+            </ul>
+          </li>
           <li class="item"><a class="link" href="#">日历</a></li>
           <li class="item"><a class="link" href="#">联系方式</a></li>
           <li class="item"><a class="link" href="#">其他</a></li>
@@ -204,6 +218,27 @@
         topNavBar.classList.add("sticky")
       } else {
         topNavBar.classList.remove("sticky")
+      }
+    }
+
+
+    let aTags = document.getElementsByClassName("menu-trigger")
+    for (let index = 0; index < aTags.length; index++) {
+      aTags[index].onmouseenter = function(event) {
+        let target = event.currentTarget
+        let brother = target.nextSibling
+        while(brother && brother.tagName !== "UL") {
+          brother = brother.nextSibling
+        }
+        brother.classList.add("active")
+      }
+      aTags[index].onmouseleave = function(event) {
+        let target = event.currentTarget
+        let brother = target.nextSibling
+        while(brother && brother.tagName !== "UL") {
+          brother = brother.nextSibling
+        }
+        brother.classList.remove("active")
       }
     }
   </script>

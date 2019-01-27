@@ -37,6 +37,21 @@ ul, ol {
   color: #b7b7b7;
 }
 
+.top-nav-bar .submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.top-nav-bar .submenu li {
+  white-space: nowrap;
+}
+
+.top-nav-bar .submenu.active {
+  display: block;
+}
+
 .top-nav-bar__inner {
   padding: 0 16px;
 }
@@ -65,6 +80,7 @@ ul, ol {
 .top-nav-bar__inner--nav .list > .item {
   float: left;
   margin: 0 17px;
+  position: relative;
 }
 
 .top-nav-bar__inner--nav .list > .item .link {

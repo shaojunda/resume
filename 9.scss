@@ -34,6 +34,18 @@ ul, ol {
   width: 100%;
   transition: all 0.5s;
   color: #b7b7b7;
+  .submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    li {
+      white-space: nowrap;
+    }
+    &.active {
+      display: block;
+    }
+  }
   &__inner {
     padding: 0 16px;
     &--logo {
@@ -55,6 +67,7 @@ ul, ol {
       .list > .item {
         float: left;
         margin: 0 17px;
+        position: relative;
         .link {
           border-top: 3px solid transparent;
           border-bottom: 3px solid transparent;
