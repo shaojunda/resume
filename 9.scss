@@ -30,20 +30,21 @@ ul, ol {
   padding: 20px 0;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   transition: all 0.5s;
   color: #b7b7b7;
   .submenu {
     display: none;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 100%;
+    background: white;
+    color: #3d4451;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
     li {
+      padding: 5px 10px;
       white-space: nowrap;
-    }
-    &.active {
-      display: block;
     }
   }
   &__inner {
@@ -68,26 +69,34 @@ ul, ol {
         float: left;
         margin: 0 17px;
         position: relative;
+        &.active {
+          .submenu {
+            display: block;
+            animation: submenuSlide 0.5s forwards;
+          }
+          .link {
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 100%;
+              left: 0;
+              width: 100%;
+              background: #e06567;
+              height: 3px;
+              animation: menuSlide 0.3s;
+            }
+          }
+        }
         .link {
           border-top: 3px solid transparent;
           border-bottom: 3px solid transparent;
           padding: 5px 0;
-          display: inline-block;
+          display: block;
           position: relative;
           font-size: 12px;
           color: inherit;
           font-weight: bold;
-          &:hover::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: #e06567;
-            height: 3px;
-            animation: menuSlide 0.3s;
-          }
         }
       }
     }
@@ -110,6 +119,16 @@ ul, ol {
   }
   100% {
     width: 100%;
+  }
+}
+
+@keyframes submenuSlide {
+  0% {
+    margin-right: 100%;
+  }
+
+  100% {
+    margin-right: 0%;
   }
 }
 
