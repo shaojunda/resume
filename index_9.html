@@ -14,7 +14,7 @@
       overflow: hidden;
     }
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tweenjs/1.0.2/tweenjs.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
   <title>个人简历</title>
 </head>
 <body>
@@ -251,17 +251,19 @@
         let duration = 500 / n
         let currentTop = window.scrollY
         let targetTop = top - 80
-        let distance = (targetTop - currentTop) / n
-        let i = 0
-        let id = setInterval(() => {
-          if (i===n) {
-            window.clearInterval(id)
-            return
-          }
-          i = i + 1
-          window.scrollTo(0, currentTop + distance * i)
-        }, duration)
-        window.scrollTo(0, top - 80)
+        let coords = { y: currentTop };
+        let distance = targetTop - currentTop
+        let time = Math.abs((distance / 100) * 300)
+        if (time > 500) {
+          time = 500
+        }
+        var tween = new TWEEN.Tween(coords)
+          .to({ y: targetTop }, time)
+          .easing(TWEEN.Easing.Quadratic.InOut)
+          .onUpdate(function() {
+            window.scrollTo(0, coords.y)
+          })
+          .start(); // Start the tween immediately.
       }
 
     }
