@@ -69,6 +69,21 @@ ul, ol {
         float: left;
         margin: 0 17px;
         position: relative;
+        &.highlight {
+          .link {
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 100%;
+              left: 0;
+              width: 100%;
+              background: #e06567;
+              height: 3px;
+              animation: menuSlide 0.3s;
+            }
+          }
+        }
         &.active {
           .submenu {
             display: block;
@@ -265,6 +280,13 @@ ul, ol {
   max-width: 940px;
   margin: 0 auto;
   margin-top: 60px;
+  &.offset .progress {
+    transform: translateX(-100%);
+  }
+  & .progress {
+    transform: translateX(0);
+    transition: all 1s;
+  }
   &__header {
     .title {
       color: #3d4451;
@@ -292,6 +314,7 @@ ul, ol {
       height: 5px;
       background-color: #fae1e1;
       border-radius: 2px;
+      overflow: hidden;
       .progress {
         height: 100%;
         background-color: #e6686a;
@@ -416,4 +439,28 @@ ul, ol {
   display: flex;
   background: #888;
   z-index: 1;
+}
+
+[data-special-tag].animate {
+  animation: slideUp 0.5s;
+}
+
+[data-special-tag].offset {
+  transform: translateY(100px)
+}
+
+[data-special-tag] {
+  transform: translateY(0px);
+  transition: all 0.5s
+}
+
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
