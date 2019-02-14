@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./loading.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.1/css/swiper.min.css">
   <link rel="stylesheet" href="./9.css">
   <style type="text/css">
     .icon {
@@ -178,7 +179,6 @@
       </ol>
     </div>
   </section>
-
   <section data-special-tag id="siteWorks" class="collections">
     <div class="collections__header">
       <div class="title">
@@ -186,29 +186,43 @@
       </div>
     </div>
     <div class="collections__body">
-      <nav class="nav">
-        <ol class="list clearfix">
-          <li id="collectionAll" class="item">所有</li>
-          <li id="collectionFramework" class="item">框架</li>
-          <li id="collectionNative" class="item">原生 JS & CSS</li>
-        </ol>
-        <div class="collections-bar">
-          <div id="collectionBarInner" class="collections-bar__inner bar-first"></div>
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <img src="./img/works/nav.jpg" alt="导航" class="swiper-slide">
+          <img src="./img/works/canvas.jpg" alt="画板" class="swiper-slide">
+          <img src="./img/works/slides.jpg" alt="轮播" class="swiper-slide">
         </div>
-      </nav>
-      <div class="works">
-        <div class="big">
-          <img src="./img/pic-big.jpg" alt="big">
-        </div>
-        <div class="small-1">
-          <img src="./img/pic-small-1.jpg" alt="small-1">
-        </div>
-        <div class="small-2">
-          <img src="./img/pic-small-2.jpg" alt="small-2">
-        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
       </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.1/js/swiper.min.js"></script>
+  <script>
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    })
+  </script>
+
   <script>
     function animate(time) {
       requestAnimationFrame(animate);
