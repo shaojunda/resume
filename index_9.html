@@ -196,6 +196,21 @@
       <div class="swiper-button-next"></div>
     </div>
   </section>
+  <section class="messages">
+    <div class="messages__header">
+      <div class="title">
+        <h2 >留言</h2>
+      </div>
+    </div>
+    <div class="messages__body">
+      <ul id="messageList"></ul>
+    </div>
+    <form id="messageForm">
+      姓名 <input type="text" name="name">
+      内容 <input type="text" name="content">
+      <input type="submit" value="提交">
+    </form>
+  </section>
   <script>
     setTimeout(function() {
       document.getElementById("site-welcome").classList.remove("active")
@@ -206,6 +221,8 @@
   <script src="./javascript/auto-slide-up.js"></script>
   <script src="./javascript/sticky-top-navbar.js"></script>
   <script src="./javascript/smoothly-navigation.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js"></script>
+  <script src="./javascript/message.js"></script>
+  <script src="//at.alicdn.com/t/font_890407_bo91qy9seve.js"></script>
 </body>
-<script src="//at.alicdn.com/t/font_890407_bo91qy9seve.js"></script>
 </html>

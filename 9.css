@@ -269,7 +269,6 @@ ul, ol {
   max-width: 720px;
   margin: 0 auto;
   margin-top: 60px;
-  margin-bottom: 300px;
   text-align: center; }
   .collections__header .title {
     color: #3d4451;
@@ -321,6 +320,22 @@ ul, ol {
 [data-special-tag] {
   transform: translateY(0px);
   transition: all 0.5s; }
+
+.messages {
+  max-width: 720px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 300px; }
+  .messages__header .title {
+    text-align: center;
+    margin-bottom: 16px; }
+  .messages__body {
+    background-color: white; }
+    .messages__body ul {
+      border-top: 1px solid #ddd; }
+      .messages__body ul li {
+        padding: 16px;
+        border-bottom: 1px solid #ddd; }
 
 @keyframes slideUp {
   0% {
