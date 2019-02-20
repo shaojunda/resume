@@ -1,34 +1,9 @@
 !function() {
-  let view = document.querySelector(".messages")
-  let model = {
+  let view = View(".messages")
+  let model = Model({resourceName: "Message"})
+
+  let controller = Controller({
     init: function() {
-      var APP_ID = 'HGBsbSSJ8sOsTzkj1566sLbx-gzGzoHsz';
-      var APP_KEY = 'mKhtjNsqy60hzMvVNEX0w15i';
-      AV.init({
-        appId: APP_ID,
-        appKey: APP_KEY
-      })
-    },
-    find: function() {
-      return new AV.Query('Message').find()
-    },
-    save: function(name, content) {
-      let MessageObject = AV.Object.extend("Message")
-      let messageObject = new MessageObject()
-      return messageObject.save({
-        name: name,
-        content: content
-      })
-    }
-  }
-  let controller = {
-    view: null,
-    messageObject: null,
-    init: function(view, model) {
-      this.view = view
-      this.model = model
-      this.model.init()
-      this.bindEvents()
       this.listMessage()
     },
     saveMessage: function(name, content) {
@@ -63,7 +38,7 @@
         this.saveMessage(name, content)
       }.bind(this))
     }
-  }
+  })
 
   controller.init.call(controller, view, model)
 }.call()
