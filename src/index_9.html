@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/loading.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.1/css/swiper.min.css">
+  <link rel="stylesheet" href="./css/9.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+  <title>个人简历</title>
+</head>
+<body>
+  <div class="site-welcome active" id="site-welcome">
+    <div class="loading"></div>
+  </div>
+  <div class="top-nav-bar" id="topNavBar">
+    <div class="top-nav-bar__inner clearfix">
+      <a class="top-nav-bar__inner--logo">
+        <span class="rs">RS</span><span class="card">card</span>
+      </a>
+      <nav class="top-nav-bar__inner--nav menu">
+        <ul class="list clearfix">
+          <li class="item"><a class="link" href="#siteAbout">关于</a></li>
+          <li class="item"><a class="link" href="#siteSkills">技能</a></li>
+          <li class="item">
+            <a class="link" href="#siteWorks">作品</a>
+            <ul class="submenu">
+              <li>作品 1</li>
+              <li>作品 2</li>
+              <li>作品 3</li>
+            </ul>
+          </li>
+          <li class="item">
+            <a class="link" href="#siteBlog">博客</a>
+            <ul class="submenu">
+              <li>博客 1</li>
+              <li>博客 2</li>
+              <li>博客 3</li>
+            </ul>
+          </li>
+          <li class="item"><a class="link" href="#siteCalendar">日历</a></li>
+          <li class="item"><a class="link" href="#siteContact">联系方式</a></li>
+          <li class="item"><a class="link" href="#siteOthers">其他</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="mask"></div>
+  </div>
+  <main class="main">
+    <div data-special-tag id="siteAbout" class="user-card">
+      <div class="user-card__container clearfix">
+        <div class="picture">
+          <img src="./img/avatar.jpg" alt="...">
+        </div>
+        <div class="profile">
+          <header class="profile__header">
+            <span class="welcome">
+              Hello
+              <span class="triangle"></span>
+            </span>
+            <h1 class="name">邵俊达</h1>
+            <p class="title">全栈开发工程师</p>
+            <hr class="separator">
+          </header>
+          <div class="profile__body">
+            <dl class="user-info">
+              <dt class="user-info__title">年龄</dt>
+              <dd class="user-info__content">29</dd>
+              <dt class="user-info__title">所在城市</dt>
+              <dd class="user-info__content">杭州</dd>
+              <dt class="user-info__title">邮箱</dt>
+              <dd class="user-info__content">junda@gmail.com</dd>
+              <dt class="user-info__title">手机</dt>
+              <dd class="user-info__content">18819999999</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="user-card__media">
+        <a href="#" class="link">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-wechat"></use>
+          </svg>
+        </a>
+        <a href="#" class="link">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-facebook"></use>
+          </svg>
+        </a>
+        <a href="#" class="link">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-line"></use>
+          </svg>
+        </a>
+        <a href="#" class="link">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-twitter"></use>
+          </svg>
+        </a>
+        <a href="#" class="link">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-tubiao215"></use>
+          </svg>
+        </a>
+        <a href="#" class="link">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-weibo"></use>
+          </svg>
+        </a>
+        <a href="#" class="link">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <p class="download-wrapper">
+      <a href="./resume.pdf" class="download-resume-button" download>下载 PDF 简历</a>
+    </p>
+    <p class="self-introduction">
+      邵俊达，资深全栈开发工程师。<br>
+      技能：前端开发，Rails 开发，Node.js 开发
+    </p>
+  </main>
+
+  <section data-special-tag id="siteSkills" class="skills">
+    <div class="skills__header">
+      <h2 class="title">技能</h2>
+    </div>
+    <div class="skills__body">
+      <ol class="list clearfix">
+        <li class="item">
+          <h3 class="item__title">HTML 5 & CSS 3</h3>
+          <div class="progress-bar">
+            <div class="progress full"></div>
+          </div>
+        </li>
+        <li class="item">
+          <h3 class="item__title">JavaScript</h3>
+          <div class="progress-bar">
+            <div class="progress half"></div>
+          </div>
+        </li>
+        <li class="item">
+          <h3 class="item__title">jQuery</h3>
+          <div class="progress-bar">
+            <div class="progress most"></div>
+          </div>
+        </li>
+        <li class="item">
+          <h3 class="item__title">Vue</h3>
+          <div class="progress-bar">
+            <div class="progress less"></div>
+          </div>
+        </li>
+        <li class="item">
+          <h3 class="item__title">React</h3>
+          <div class="progress-bar">
+            <div class="progress less"></div>
+          </div>
+        </li>
+        <li class="item">
+          <h3 class="item__title">HTTP</h3>
+          <div class="progress-bar">
+            <div class="progress less"></div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+  <section data-special-tag id="siteWorks" class="collections">
+    <div class="collections__header">
+      <div class="title">
+        <h2 class="title">作品集</h2>
+      </div>
+    </div>
+    <div class="collections__body">
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <img src="./img/works/nav.jpg" alt="导航" class="swiper-slide">
+          <img src="./img/works/canvas.jpg" alt="画板" class="swiper-slide">
+          <img src="./img/works/slides.jpg" alt="轮播" class="swiper-slide">
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+      </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+  <section class="messages">
+    <div class="messages__header">
+      <div class="title">
+        <h2 >留言</h2>
+      </div>
+    </div>
+    <div class="messages__body">
+      <ul id="messageList"></ul>
+    </div>
+    <form id="messageForm">
+      姓名 <input type="text" name="name">
+      内容 <input type="text" name="content">
+      <input type="submit" value="提交">
+    </form>
+  </section>
+  <script>
+    setTimeout(function() {
+      document.getElementById("site-welcome").classList.remove("active")
+    }, 1000)
+  </script>
+  <script src="javascript/base/view.js"></script>
+  <script src="javascript/base/controller.js"></script>
+  <script src="javascript/base/model.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.1/js/swiper.min.js"></script>
+  <script src="./javascript/init_swiper.js"></script>
+  <script src="./javascript/auto-slide-up.js"></script>
+  <script src="./javascript/sticky-top-navbar.js"></script>
+  <script src="./javascript/smoothly-navigation.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js"></script>
+  <script src="./javascript/message.js"></script>
+  <script src="//at.alicdn.com/t/font_890407_bo91qy9seve.js"></script>
+</body>
+</html>

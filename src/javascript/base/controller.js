@@ -12,7 +12,7 @@ window.Controller = function(options) {
     }
   }
 
-  for (key in options) {
+  for (let key in options) {
     if (key !== 'init') {
       object[key] = options[key]
     }
