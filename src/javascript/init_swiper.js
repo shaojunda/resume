@@ -1,4 +1,4 @@
-!function () {
+function launchInitSwiper() {
   var view = document.querySelector('#siteWorks')
   var controller = {
     view: null,
@@ -28,4 +28,6 @@
     }
   }
   controller.init.call(controller, view)
-}.call()
+}
+
+export default launchInitSwiper

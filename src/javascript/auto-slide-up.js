@@ -1,4 +1,4 @@
-!function() {
+function launchAutoSlideUp() {
   let specialTags = document.querySelectorAll("[data-special-tag]")
   for (let index = 0; index < specialTags.length; index++) {
     const element = specialTags[index];
@@ -33,5 +33,7 @@
     }
     li.classList.add("highlight")
   }
-}.call()
+}
+
+export default launchAutoSlideUp
 

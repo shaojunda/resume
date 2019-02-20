@@ -1,4 +1,4 @@
-!function() {
+function launch_message() {
   let view = View(".messages")
   let model = Model({resourceName: "Message"})
 
@@ -41,4 +41,6 @@
   })
 
   controller.init.call(controller, view, model)
-}.call()
+}
+
+export default launch_message

@@ -1,4 +1,4 @@
-!function() {
+function launchSmoothlyNavigation() {
   var view = document.querySelector('nav.menu')
   var controller = {
     view: null,
@@ -61,4 +61,6 @@
     }
   }
   controller.init.call(controller, view)
-}.call()
+}
+
+export default launchSmoothlyNavigation

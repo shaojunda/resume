@@ -1,4 +1,4 @@
-!function() {
+function launchStickyTopNavbar() {
   var view = document.querySelector("#topNavBar")
   var controller = {
     init: function(view) {
@@ -23,4 +23,6 @@
   }
 
   controller.init.call(controller, view)
-}.call()
+}
+
+export default launchStickyTopNavbar
